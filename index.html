@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portofolio Icha Devita Anggra Eni</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body id="atas">
+
+<div id="laut" aria-hidden="true"></div>
+
+<div class="lapis">
+
+<!-- ===== PEMBUKA ===== -->
+<div class="pembuka" id="pembuka">
+  <p class="hallo">Hallo, aku Icha! <span>👋</span></p>
+  <p class="sambutan">Selamat datang di lautan kecilku. Yuk, menyelam bersama dan main tiga game kecil buatanku.</p>
+
+  <div class="putar-wrap">
+    <span class="hewan-atas h1">🐙</span><span class="hewan-atas h2">🐳</span>
+    <span class="hewan-atas h3">🐠</span><span class="hewan-atas h4">🐢</span>
+    <div class="bingkai"><div class="dalam">
+      <button class="foto" id="fotoBtn" type="button">
+      <img alt="Foto Icha Devita Anggra Eni" src="icha.jpeg">
+      </button>
+    </div></div>
+  </div>
+  <input type="file" id="fotoInput" accept="image/*" style="display:none">
+
+  <h1>Icha Devita Anggra Eni</h1>
+  <p class="peran">Siswi SMK Ma’arif 1 Nanggulan di kelas Gamelab Indonesia 🌊</p>
+  <p class="ketik" id="ketik"></p>
+  <div class="menu"><a href="#tentang">Tentang Saya</a><a href="#project">Mini Game</a></div>
+
+  <svg class="ombak" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 35 C150 75 300 -5 450 35 S750 75 900 35 S1100 0 1200 30 V70 H0Z" fill="#d9f1ff"/></svg>
+</div>
+
+<div class="jalan" aria-hidden="true"><div>🐠 Selamat datang di portofolio Icha 🐙 &nbsp; 🐳 Siswi SMK Ma’arif 1 Nanggulan 🐢 &nbsp; 🦀 Belajar di Gamelab Indonesia 🐬 &nbsp; 🫧 Ayo main game bersama 🐚 &nbsp; 🐠 Selamat datang di portofolio Icha 🐙 &nbsp; 🐳 Siswi SMK Ma’arif 1 Nanggulan 🐢</div></div>
+
+<div class="box">
+  <h2 id="tentang">Tentang Saya 🐚</h2>
+  <div class="card">
+    <p>Halo, aku <b>Icha Devita Anggra Eni</b>, seorang siswi SMK Ma’arif 1 Nanggulan yang saat ini sedang menimba ilmu di kelas Gamelab Indonesia. Di sini aku belajar mengubah ide-ide kecil di kepalaku menjadi karya digital dan game yang bisa dimainkan siapa saja. 🐠</p>
+    <p>Seperti ombak yang tak pernah lelah menyapa pantai, aku percaya langkah kecil yang dilakukan setiap hari akan membawaku ke tempat yang jauh. Aku suka mencoba hal baru, tidak takut salah, dan selalu ingin tumbuh sedikit lebih baik dari kemarin. 🌊</p>
+    <p>Bagiku, belajar itu seperti menyelam: awalnya terasa dalam dan asing, tapi semakin jauh kita berani melangkah, semakin indah dunia yang kita temukan. 🐙</p>
+    <p><b>“Jadilah seperti lumba-lumba: cerdas, ceria, dan selalu berani melompat ke arah yang baru.” 🐬</b></p>
+    <div class="stiker"><span>🐬 Rasa ingin tahu</span><span>🐙 Kreatif</span><span>🐢 Sabar belajar</span><span>🦀 Pantang menyerah</span><span>🐠 Ceria</span></div>
+  </div>
+
+  <h2 id="project">3 Mini Game 🎮</h2>
+
+  <!-- GAME 1 -->
+  <div class="card c1">
+    <h3>🐠 Game 1: Tangkap Ikan</h3>
+    <p>Ketuk ikan sebanyak-banyaknya dalam 20 detik!</p>
+    <div class="info"><span>Skor: <span id="g1skor">0</span></span><span>Waktu: <span id="g1waktu">20</span>s</span><span>Rekor: <span id="g1rekor">0</span></span></div>
+    <div class="arena" id="arena"><div class="pesan" id="g1pesan">Tekan tombol Mulai 🌊</div></div>
+    <p><button class="tombol" type="button" id="g1mulai">Mulai Main</button></p>
+  </div>
+
+  <!-- GAME 2 -->
+  <div class="card c2">
+    <h3>🐙 Game 2: Cari Pasangan</h3>
+    <p>Buka dua kartu dan temukan pasangan hewan lautnya!</p>
+    <div class="info"><span>Langkah: <span id="g2langkah">0</span></span><span>Cocok: <span id="g2cocok">0</span>/6</span></div>
+    <div class="grid" id="g2grid"></div>
+    <p class="teks" id="g2pesan">Ketuk kartu untuk mulai 🐚</p>
+    <button class="tombol" type="button" id="g2ulang">Acak Ulang</button>
+  </div>
+
+  <!-- GAME 3 -->
+  <div class="card c3">
+    <h3>🐬 Game 3: Kuis Laut</h3>
+    <div class="info"><span>Soal: <span id="g3no">1</span>/5</span><span>Skor: <span id="g3skor">0</span></span></div>
+    <p id="g3tanya"><b></b></p>
+    <div id="g3opsi"></div>
+    <p class="teks" id="g3pesan">Pilih jawaban yang benar 🌊</p>
+    <button class="tombol" type="button" id="g3ulang">Main Lagi</button>
+  </div>
+</div>
+
+<!-- ===== PENUTUP ===== -->
+<div class="penutup">
+  <svg class="ombak-atas" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1200 V35 C1100 0 1000 70 900 35 S650 0 450 35 S150 70 0 35Z" fill="#d9f1ff"/></svg>
+  <div class="baris"><span>🐳</span><span>🐠</span><span>🐙</span><span>🐢</span><span>🦀</span></div>
+  <h2>Terima Kasih Sudah Berkunjung!</h2>
+  <p>Terima kasih sudah menyelam sejenak di portofolioku. Semoga game-game kecil ini membuatmu tersenyum, dan semoga kita bertemu lagi di karya-karyaku berikutnya.</p>
+  <p class="kutip">“Setiap ombak membawa cerita baru, dan aku akan terus belajar menuliskannya.” 🌊</p>
+  <button class="kejutan" type="button" id="kejutan">Taburkan kejutan 🎉</button>
+  <a class="balik" href="#atas">Kembali ke atas 🐚</a>
+  <div class="rumput" aria-hidden="true"><span>🌿</span><span>🪸</span><span>🌿</span><span>🐚</span><span>🪸</span><span>🌿</span><span>⭐</span><span>🌿</span></div>
+  <div class="pasir">🐚 Dibuat dengan sepenuh hati oleh <b>Icha Devita Anggra Eni</b> · SMK Ma’arif 1 Nanggulan · Gamelab Indonesia</div>
+</div>
+
+</div>
+
+<script>
+function acak(a,b){return a+Math.random()*(b-a)}
+function $(id){return document.getElementById(id)}
+
+// Ikan berenang di latar belakang
+var laut=$('laut'), hw=['🐠','🐟','🐡','🐬','🐢','🦀'];
+for(var i=0;i<8;i++){
+  var s=document.createElement('span'); s.className='ikan'; s.textContent=hw[i%hw.length];
+  s.style.top=acak(8,92)+'%'; s.style.animationDuration=acak(18,34)+'s'; s.style.animationDelay=(-acak(0,30))+'s';
+  laut.appendChild(s);
+}
+
+// Gelembung dan bintang di pembuka
+var pb=$('pembuka');
+for(var j=0;j<16;j++){
+  var g=document.createElement('span'); g.className='gel'; var u=acak(10,32);
+  g.style.left=acak(2,96)+'%'; g.style.width=g.style.height=u+'px';
+  g.style.animationDuration=acak(7,13)+'s'; g.style.animationDelay=(-acak(0,12))+'s';
+  pb.appendChild(g);
+}
+['✨','⭐','✨','🌟','✨','⭐'].forEach(function(e){
+  var b=document.createElement('span'); b.className='bintang'; b.textContent=e;
+  b.style.left=acak(4,92)+'%'; b.style.top=acak(4,50)+'%'; b.style.animationDelay=(-acak(0,3))+'s';
+  pb.appendChild(b);
+});
+
+// Ledakan emoji
+function ledak(x,y,daftar){
+  for(var k=0;k<12;k++){
+    var c=document.createElement('span'); c.className='cf'; c.textContent=daftar[Math.floor(Math.random()*daftar.length)];
+    c.style.left=x+'px'; c.style.top=y+'px';
+    c.style.setProperty('--dx',acak(-130,130)+'px'); c.style.setProperty('--dy',acak(-150,60)+'px');
+    document.body.appendChild(c);
+    (function(el){setTimeout(function(){el.remove()},1000)})(c);
+  }
+}
+
+// Tulisan mengetik
+var kalimat=['Suka belajar hal baru 🌊','Suka hewan laut yang lucu 🐙','Ayo main game bersamaku 🎮'], ki=0, kc=0, hapus=false, el=$('ketik');
+function ketik(){
+  var t=kalimat[ki];
+  el.textContent=t.substring(0,kc);
+  if(!hapus && kc<t.length){kc++; setTimeout(ketik,90)}
+  else if(!hapus){hapus=true; setTimeout(ketik,1400)}
+  else if(kc>0){kc--; setTimeout(ketik,45)}
+  else{hapus=false; ki=(ki+1)%kalimat.length; setTimeout(ketik,300)}
+}
+ketik();
+
+// Foto profil (ketuk untuk memilih foto dari galeri)
+var fotoImg=$('fotoImg'), fotoTeks=$('fotoTeks'), fotoInput=$('fotoInput');
+$('fotoBtn').onclick=function(){fotoInput.click()};
+fotoInput.onchange=function(){
+  var f=fotoInput.files[0]; if(!f) return;
+  var r=new FileReader();
+  r.onload=function(){fotoImg.src=r.result;fotoImg.style.display='block';fotoTeks.style.display='none'};
+  r.readAsDataURL(f);
+};
+
+/* ===== GAME 1: Tangkap Ikan ===== */
+var arena=$('arena'), g1skor=0, g1waktu=20, g1rekor=0, g1jalan=false, g1spawn, g1hitung;
+function g1akhir(){
+  g1jalan=false; clearInterval(g1spawn); clearInterval(g1hitung);
+  arena.querySelectorAll('.target').forEach(function(t){t.remove()});
+  if(g1skor>g1rekor){g1rekor=g1skor; $('g1rekor').textContent=g1rekor}
+  $('g1pesan').style.display='flex';
+  $('g1pesan').textContent='Selesai! Kamu dapat '+g1skor+' ikan 🎉';
+  $('g1mulai').disabled=false; $('g1mulai').textContent='Main Lagi';
+}
+function g1muncul(){
+  var t=document.createElement('span'); t.className='target';
+  t.textContent=['🐠','🐟','🐡','🦑','🐙'][Math.floor(Math.random()*5)];
+  t.style.left=acak(4,84)+'%'; t.style.top=acak(4,76)+'%';
+  t.onpointerdown=function(e){
+    if(!g1jalan) return;
+    g1skor++; $('g1skor').textContent=g1skor; t.remove();
+    ledak(e.clientX,e.clientY,['🫧','✨','⭐']);
+  };
+  arena.appendChild(t);
+  setTimeout(function(){if(t.parentNode) t.remove()},1300);
+}
+$('g1mulai').onclick=function(){
+  g1skor=0; g1waktu=20; g1jalan=true;
+  $('g1skor').textContent=0; $('g1waktu').textContent=20;
+  $('g1pesan').style.display='none';
+  this.disabled=true; this.textContent='Sedang main...';
+  g1spawn=setInterval(g1muncul,650);
+  g1hitung=setInterval(function(){
+    g1waktu--; $('g1waktu').textContent=g1waktu;
+    if(g1waktu<=0) g1akhir();
+  },1000);
+};
+
+/* ===== GAME 2: Cari Pasangan ===== */
+var g2emo=['🐙','🐠','🐳','🐢','🦀','🐬'], g2kartu=[], g2buka=[], g2langkah=0, g2cocok=0, g2kunci=false;
+function g2mulai(){
+  var arr=g2emo.concat(g2emo);
+  for(var i=arr.length-1;i>0;i--){var r=Math.floor(Math.random()*(i+1));var t=arr[i];arr[i]=arr[r];arr[r]=t}
+  g2buka=[]; g2langkah=0; g2cocok=0; g2kunci=false;
+  $('g2langkah').textContent=0; $('g2cocok').textContent=0;
+  $('g2pesan').textContent='Ketuk kartu untuk mulai 🐚';
+  var grid=$('g2grid'); grid.innerHTML=''; g2kartu=[];
+  arr.forEach(function(emo){
+    var b=document.createElement('button'); b.type='button'; b.className='kartu'; b.textContent='🌊';
+    b.onclick=function(e){
+      if(g2kunci||b.classList.contains('buka')||b.classList.contains('cocok')) return;
+      b.classList.add('buka'); b.textContent=emo; g2buka.push({b:b,emo:emo});
+      if(g2buka.length===2){
+        g2langkah++; $('g2langkah').textContent=g2langkah; g2kunci=true;
+        var a=g2buka[0], c=g2buka[1];
+        if(a.emo===c.emo){
+          a.b.className=c.b.className='kartu cocok'; g2cocok++; $('g2cocok').textContent=g2cocok;
+          g2buka=[]; g2kunci=false;
+          ledak(e.clientX,e.clientY,['⭐','✨',a.emo]);
+          $('g2pesan').textContent= g2cocok===6 ? 'Hebat! Semua pasangan ketemu dalam '+g2langkah+' langkah 🎉' : 'Cocok! Lanjut terus 🐠';
+        }else{
+          $('g2pesan').textContent='Belum cocok, coba lagi 🫧';
+          setTimeout(function(){
+            a.b.className=c.b.className='kartu'; a.b.textContent=c.b.textContent='🌊';
+            g2buka=[]; g2kunci=false;
+          },800);
+        }
+      }
+    };
+    grid.appendChild(b);
+  });
+}
+$('g2ulang').onclick=g2mulai; g2mulai();
+
+/* ===== GAME 3: Kuis Laut ===== */
+var soal=[
+  {q:'Hewan laut yang punya 8 tangan adalah...',o:['Gurita 🐙','Kepiting 🦀','Penyu 🐢'],a:0},
+  {q:'Mamalia terbesar di laut adalah...',o:['Hiu','Paus biru 🐳','Lumba-lumba'],a:1},
+  {q:'Hewan yang berjalan menyamping adalah...',o:['Kepiting 🦀','Ikan badut','Gurita'],a:0},
+  {q:'Lumba-lumba bernapas dengan...',o:['Insang','Kulit','Paru-paru 🫁'],a:2},
+  {q:'Penyu laut bertelur di...',o:['Pasir pantai 🏖️','Dasar laut','Karang'],a:0}
+];
+var g3i=0, g3skor=0, g3kunci=false;
+function g3tampil(){
+  var s=soal[g3i]; g3kunci=false;
+  $('g3no').textContent=g3i+1; $('g3skor').textContent=g3skor;
+  $('g3tanya').innerHTML='<b>'+s.q+'</b>';
+  $('g3pesan').textContent='Pilih jawaban yang benar 🌊';
+  $('g3ulang').style.display='none';
+  var w=$('g3opsi'); w.innerHTML='';
+  s.o.forEach(function(teks,idx){
+    var b=document.createElement('button'); b.type='button'; b.className='pilih'; b.textContent=teks;
+    b.onclick=function(e){
+      if(g3kunci) return; g3kunci=true;
+      if(idx===s.a){
+        b.classList.add('benar'); g3skor++; $('g3skor').textContent=g3skor;
+        $('g3pesan').textContent='Benar! 🎉'; ledak(e.clientX,e.clientY,['🐬','⭐','✨','💙']);
+      }else{
+        b.classList.add('salah'); w.children[s.a].classList.add('benar');
+        $('g3pesan').textContent='Yah, belum tepat. Jawaban benarnya sudah ditandai hijau 🐚';
+      }
+      setTimeout(function(){
+        g3i++;
+        if(g3i<soal.length) g3tampil();
+        else{
+          $('g3tanya').innerHTML='<b>Kuis selesai! 🎉</b>'; w.innerHTML='';
+          $('g3pesan').textContent='Skor akhirmu '+g3skor+' dari '+soal.length+(g3skor===soal.length?' — sempurna! 🐳':' — ayo coba lagi! 🐠');
+          $('g3ulang').style.display='inline-block';
+        }
+      },1300);
+    };
+    w.appendChild(b);
+  });
+}
+$('g3ulang').onclick=function(){g3i=0;g3skor=0;g3tampil()};
+g3tampil();
+
+// Kejutan di penutup
+$('kejutan').onclick=function(e){
+  ledak(e.clientX,e.clientY,['🐙','🐠','🐳','🐢','🦀','🎉','🐚','💙']);
+};
+</script>
+</body>
+</html>
