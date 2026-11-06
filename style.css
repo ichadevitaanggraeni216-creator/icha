@@ -1,0 +1,97 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#d9f1ff;color:#0d2a40;line-height:1.6;overflow-x:hidden}
+.lapis{position:relative;z-index:1}
+
+/* ikan berenang di latar */
+#laut{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.ikan{position:absolute;left:0;font-size:28px;opacity:.55;animation:berenang linear infinite}
+@keyframes berenang{from{transform:translateX(-80px)}to{transform:translateX(calc(100vw + 80px))}}
+
+/* ledakan emoji saat diketuk */
+.cf{position:fixed;pointer-events:none;font-size:24px;z-index:99;animation:pecah 1s ease-out forwards}
+@keyframes pecah{to{transform:translate(var(--dx),var(--dy)) scale(.6) rotate(200deg);opacity:0}}
+
+/* ===== PEMBUKA ===== */
+.pembuka{position:relative;overflow:hidden;text-align:center;color:#fff;padding:46px 16px 120px;background:linear-gradient(#062c4a,#0b3d63 30%,#1478b5 70%,#4fb3e8)}
+.gel{position:absolute;bottom:-50px;border-radius:50%;background:rgba(255,255,255,.22);border:2px solid rgba(255,255,255,.55);animation:naik linear infinite}
+@keyframes naik{to{transform:translateY(-760px)}}
+.bintang{position:absolute;font-size:18px;animation:kedip 2.5s ease-in-out infinite}
+@keyframes kedip{50%{opacity:.15;transform:scale(.6)}}
+.hallo{position:relative;margin:0;font-size:clamp(42px,12vw,70px);font-weight:bold;line-height:1.1;text-shadow:0 4px 0 rgba(0,0,0,.25)}
+.hallo span{display:inline-block;animation:lambai 1.8s ease-in-out infinite;transform-origin:70% 70%}
+@keyframes lambai{0%,60%,100%{transform:rotate(0)}20%{transform:rotate(18deg)}40%{transform:rotate(-12deg)}}
+.sambutan{position:relative;max-width:480px;margin:10px auto 24px;font-size:17px}
+.bingkai{position:relative;display:inline-block;padding:9px;border-radius:50%;background:conic-gradient(#fff1d6,#ff8fa3,#4fb3e8,#ffd166,#fff1d6);animation:putar 8s linear infinite}
+@keyframes putar{to{transform:rotate(360deg)}}
+.dalam{animation:putar 8s linear infinite reverse;border-radius:50%}
+.foto{width:170px;height:170px;border-radius:50%;border:5px solid #fff;background:#e6f6ff;color:#0b3d63;font-weight:bold;cursor:pointer;overflow:hidden;padding:0;display:block}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+.foto span{display:none;padding:10px}
+.putar-wrap{position:relative;display:inline-block}
+.hewan-atas{position:absolute;font-size:36px;animation:goyang 4s ease-in-out infinite}
+.h1{left:-54px;top:0}.h2{right:-54px;top:16px;animation-delay:-1.5s}.h3{left:-46px;bottom:0;animation-delay:-3s}.h4{right:-48px;bottom:4px;animation-delay:-2s}
+@keyframes goyang{50%{transform:translateY(-12px) rotate(8deg)}}
+.pembuka h1{position:relative;margin:20px 0 6px;font-size:clamp(26px,7vw,40px)}
+.peran{position:relative;margin:0;font-size:17px}
+.ketik{position:relative;margin:12px 0 0;font-size:18px;font-weight:bold;color:#fff1d6;min-height:30px}
+.ketik::after{content:"|";animation:kedip 1s steps(1) infinite}
+.menu{position:relative;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
+.menu a{background:#fff1d6;color:#0b3d63;font-weight:bold;text-decoration:none;padding:9px 18px;border-radius:20px;transition:transform .2s}
+.menu a:hover{transform:scale(1.1) rotate(-3deg);background:#ff8fa3}
+.ombak{position:absolute;left:0;bottom:-1px;width:100%;height:70px;display:block}
+
+/* tulisan berjalan */
+.jalan{overflow:hidden;white-space:nowrap;background:#ff8fa3;color:#fff;font-weight:bold;padding:8px 0;transform:rotate(-1.2deg);margin:-14px -10px 10px}
+.jalan div{display:inline-block;padding-left:100%;animation:geser 26s linear infinite}
+@keyframes geser{to{transform:translateX(-100%)}}
+
+/* ===== ISI ===== */
+.box{max-width:900px;margin:0 auto;padding:10px 20px 20px}
+h2{color:#0b3d63;font-size:28px;margin-top:34px}
+.card{background:#fff;border-radius:22px;padding:18px;margin-bottom:20px;box-shadow:0 6px 0 #b9defa;border-left:10px solid #4fb3e8}
+.card h3{margin-top:0;color:#1478b5;font-size:22px}
+.c1{border-left-color:#ff8fa3}.c2{border-left-color:#ffd166}.c3{border-left-color:#4fb3e8}
+.stiker{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.stiker span{background:#e6f6ff;border-radius:20px;padding:5px 14px;font-weight:bold;color:#0b3d63;transition:transform .2s}
+.stiker span:hover{transform:scale(1.15) rotate(4deg);background:#fff1d6}
+.pilih{display:block;width:100%;text-align:left;margin:6px 0;padding:10px;border:2px solid #4fb3e8;border-radius:14px;background:#e6f6ff;color:#0d2a40;font-size:16px;cursor:pointer;transition:transform .15s}
+.pilih:hover{transform:translateX(6px)}
+.pilih.benar{background:#2fb872;color:#fff;border-color:#2fb872}
+.pilih.salah{background:#e5566d;color:#fff;border-color:#e5566d}
+.teks{background:#e6f6ff;border-radius:14px;padding:10px;min-height:44px;margin:8px 0}
+.tombol{background:#1478b5;color:#fff;border:0;border-radius:20px;padding:10px 18px;font-size:16px;cursor:pointer;box-shadow:0 4px 0 #0b3d63}
+.tombol:active{transform:translateY(3px);box-shadow:0 1px 0 #0b3d63}
+.info{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-weight:bold;margin-bottom:8px}
+
+/* Game 1: Tangkap Ikan */
+.arena{position:relative;height:260px;border-radius:18px;overflow:hidden;background:linear-gradient(#bfe8ff,#4fb3e8);border:3px solid #1478b5;touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.target{position:absolute;font-size:38px;cursor:pointer;animation:muncul .25s ease-out}
+@keyframes muncul{from{transform:scale(0)}to{transform:scale(1)}}
+.arena .pesan{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;font-weight:bold;color:#0b3d63;pointer-events:none}
+
+/* Game 2: Cari Pasangan */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:8px 0}
+.kartu{aspect-ratio:1;font-size:34px;border:0;border-radius:14px;background:#1478b5;color:#fff;cursor:pointer;box-shadow:0 4px 0 #0b3d63;transition:transform .15s}
+.kartu.buka{background:#fff1d6;box-shadow:0 4px 0 #c9a45c}
+.kartu.cocok{background:#b8f0cf;box-shadow:0 4px 0 #2fb872}
+
+/* ===== PENUTUP ===== */
+.penutup{position:relative;overflow:hidden;text-align:center;color:#fff;margin-top:50px;padding:100px 20px 0;background:linear-gradient(#4fb3e8,#1478b5 40%,#0b3d63 80%,#062c4a)}
+.ombak-atas{position:absolute;left:0;top:-1px;width:100%;height:70px;display:block}
+.baris{font-size:40px;margin-bottom:6px}
+.baris span{display:inline-block;animation:lompat 2.4s ease-in-out infinite}
+.baris span:nth-child(2){animation-delay:.3s}.baris span:nth-child(3){animation-delay:.6s}
+.baris span:nth-child(4){animation-delay:.9s}.baris span:nth-child(5){animation-delay:1.2s}
+@keyframes lompat{0%,60%,100%{transform:translateY(0)}30%{transform:translateY(-16px)}}
+.penutup h2{color:#fff;font-size:clamp(26px,7vw,38px);margin:10px 0}
+.penutup p{max-width:560px;margin:10px auto}
+.kutip{font-style:italic;background:rgba(255,255,255,.14);border-radius:18px;padding:14px 18px}
+.kejutan{background:#fff1d6;color:#0b3d63;font-weight:bold;border:0;border-radius:20px;padding:12px 22px;font-size:16px;cursor:pointer;box-shadow:0 4px 0 #c9a45c;margin:6px}
+.balik{display:inline-block;background:#ff8fa3;color:#fff;font-weight:bold;text-decoration:none;border-radius:20px;padding:12px 22px;margin:6px;box-shadow:0 4px 0 #c75c72}
+.rumput{display:flex;justify-content:space-around;font-size:34px;margin-top:30px}
+.rumput span{display:inline-block;transform-origin:bottom;animation:goyang2 3s ease-in-out infinite}
+.rumput span:nth-child(even){animation-delay:-1.4s}
+@keyframes goyang2{50%{transform:rotate(10deg)}}
+.pasir{background:#fff1d6;color:#0b3d63;padding:16px;font-size:14px}
+
+@media (prefers-reduced-motion:reduce){.gel,.bintang,.hallo span,.hewan-atas,.baris span,.ikan,.bingkai,.dalam,.jalan div,.rumput span{animation:none}}
